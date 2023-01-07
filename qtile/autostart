@@ -1,0 +1,6 @@
+#!/bin/bash
+feh --bg-scale $HOME/Pictures/Wallpapers/ozrt0k0wt95a1.jpg &
+picom -b &
+lxsession &
+dunst &
+gnome-keyring-daemon --daemonize &

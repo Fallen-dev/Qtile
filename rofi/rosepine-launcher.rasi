@@ -1,0 +1,146 @@
+* {
+  sans: "SF Pro";
+
+  base: #191724;
+  surface: #1f1d2e;
+  muted: #6e6a86;
+  subtle: #908caa;
+  text: #e0def4;
+  love: #eb6f92;
+  gold: #f6c177;
+  rose: #ebbcba;
+  pine: #31748f;
+  foam: #9ccfd8;
+  iris: #c4a7e7;
+  highlight: #403d52;
+
+  background-color:   @base;
+  text-color:         @text;
+  font: "@sans medium italic 12";
+}
+
+window {
+    /* properties for window widget */
+    transparency:                "real";
+    location:                    center;
+    anchor:                      center;
+    fullscreen:                  false;
+    width:                       400px;
+    x-offset:                    0px;
+    y-offset:                    0px;
+
+    /* properties for all widgets */
+    enabled:                     true;
+    margin:                      0px;
+    padding:                     0px;
+    border:                      6px;
+    border-radius:               0;
+    border-color:                @iris;
+    background-color:            @base;
+}
+
+mainbox {
+    enabled:                     true;
+    spacing:                     10px;
+    margin:                      0px;
+    padding:                     40px;
+    border:                      0px solid;
+    border-radius:               0px 0px 0px 0px;
+    border-color:                @border-colour;
+    background-color:            transparent;
+    children: ["inputbar", "listview"];
+}
+
+inputbar {
+    enabled:                     true;
+    spacing:                     10px;
+    margin:                      0px;
+    padding:                     0px;
+    border:                      0px;
+    background-color:            transparent;
+    text-color:                  @base;
+    children:                    [ "prompt", "entry" ];
+}
+
+prompt {
+    enabled:                     true;
+    background-color:            inherit;
+    text-color:                  inherit;
+}
+
+textbox-prompt-colon {
+    enabled:                     true;
+    expand:                      false;
+    str:                         "::";
+    background-color:            inherit;
+    text-color:                  inherit;
+}
+entry {
+    enabled:                     true;
+    background-color:            inherit;
+    text-color:                  inherit;
+    cursor:                      text;
+    placeholder:                 "search...";
+    placeholder-color:           inherit;
+}
+
+listview {
+    enabled:                     true;
+    columns:                     1;
+    lines:                       12;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   true;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+
+    spacing:                     5px;
+    margin:                      0px;
+    padding:                     0px;
+    border:                      0px;
+    background-color:            transparent;
+    text-color:                  @text;
+    cursor:                      "default";
+}
+
+element {
+    enabled:                     true;
+    spacing:                     8px;
+    margin:                      0px;
+    padding:                     8px;
+    border:                      0px;
+    background-color:            transparent;
+    text-color:                  @text;
+    cursor:                      pointer;
+}
+element selected{
+    background-color:            @base;
+    text-color:                  @iris;
+}
+element-icon {
+    background-color:            transparent;
+    text-color:                  inherit;
+    size:                        24px;
+    cursor:                      inherit;
+}
+element-text {
+    background-color:            transparent;
+    text-color:                  inherit;
+    highlight:                   inherit;
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+}
+
+textbox {
+    padding:                     8px;
+    background-color:            @love;
+    text-color:                  @base;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+    highlight:                   none;
+    blink:                       true;
+    markup:                      true;
+}
